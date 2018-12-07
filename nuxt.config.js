@@ -69,6 +69,18 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    },
+
+    babel: {
+      plugins: [
+        [
+          component,
+          {
+            libraryName: 'element-ui',
+            styleLibraryName: 'theme-chalk'
+          }
+        ]
+      ]
     }
   }
 }
