@@ -1,0 +1,24 @@
+/* color相关变量 */
+$--main-color: #2b3843; //主色调
+$--secondary-color: #FF9C00; //辅助色
+
+$--color-white: #fff;
+$--color-black: #000;
+
+$--color-main-light-1: mix($--color-white, $--main-color, 10%); /* 404b54 */
+$--color-main-light-2: mix($--color-white, $--main-color, 20%); /* 555f68 */
+$--color-main-light-3: mix($--color-white, $--main-color, 30%); /* 6a737b */
+$--color-main-light-4: mix($--color-white, $--main-color, 40%); /* 7f878e */
+$--color-main-light-5: mix($--color-white, $--main-color, 50%); /* 959ba1 */
+$--color-main-light-6: mix($--color-white, $--main-color, 60%); /* aaafb3 */
+$--color-main-light-7: mix($--color-white, $--main-color, 70%); /* bfc3c6 */
+$--color-main-light-8: mix($--color-white, $--main-color, 80%); /* d4d7d9 */
+$--color-main-light-9: mix($--color-white, $--main-color, 90%); /* e9ebec */
+
+/* 字体相关变量 */
+$--extra-large: 20px;
+$--large: 18px;
+$--medium: 16px;
+$--small: 14px;
+$--extra-small: 13px;
+$--extra-extra-small: 12px;

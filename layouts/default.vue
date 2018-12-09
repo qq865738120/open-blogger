@@ -1,55 +1,84 @@
 <template>
-  <div>
-    <nuxt/>
-  </div>
+  <el-container>
+    <el-header>
+      <el-row
+        :gutter="20"
+        type="flex"
+        justify="center"
+        align="middle">
+        <el-col
+          :span="2"
+          class="flex-inline-center">
+          <div class="iconfont open-logo logo "/>
+        </el-col>
+        <el-col :span="9">
+          <el-menu
+            mode="horizontal"
+            default-active="1"
+            background-color="#2B3843"
+            text-color="#fff"
+            active-text-color="#FF9C00">
+            <el-menu-item
+              index="1">
+              {{ $t('header.homePage') }}
+            </el-menu-item>
+            <el-menu-item
+              index="2">
+              {{ $t('header.classify') }}
+            </el-menu-item>
+          </el-menu>
+        </el-col>
+        <el-col span="3">
+          <el-row
+
+            span="24"
+            type="flex"
+            justify="end">
+            <el-input
+              v-model="input21"
+              class="search-input"
+              maxlength="120"
+              minlength="2"
+              clearable="true"
+              placeholder="请输入内容"
+              prefix-icon="el-icon-search"/>
+          </el-row>
+        </el-col>
+      </el-row>
+    </el-header>
+    <el-main>
+      <nuxt/>
+    </el-main>
+    <el-footer>
+      13
+    </el-footer>
+  </el-container>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<script>
+export default {
+  mounted() {
+    var scrollbar = new this.$geminiScrollbar({
+      element: document.body,
+      autoshow: true
+    }).create()
+    console.log(scrollbar)
+  }
 }
+</script>
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+<style lang="scss">
+@import 'assets/style/common';
+
+.el-header {
+  background-color: $--main-color;
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.logo {
+  color: $--color-white;
+  font-size: 48px;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.search-input .el-input__inner {
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 </style>

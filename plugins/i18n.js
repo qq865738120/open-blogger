@@ -3,8 +3,6 @@ import VueI18n from 'vue-i18n'
 
 Vue.use(VueI18n)
 
-console.log('666')
-
 export default ({ app, store }) => {
   // Set i18n instance on app
   // This way we can use it in middleware and pages asyncData/fetch

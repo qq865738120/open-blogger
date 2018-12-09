@@ -13,9 +13,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   /*
@@ -28,15 +26,28 @@ module.exports = {
   */
   css: [
     // 'element-ui/lib/theme-chalk/index.css'
-    '~/theme/index.css'
+    '@/theme/index.css',
+    '@/assets/style/global.scss',
+    'element-ui/lib/theme-chalk/display.css',
+    '@/assets/style/normalize.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui',
-    '@/plugins/i18n'
+    {
+      src: '@/plugins/element-ui',
+      ssr: false
+    },
+    {
+      src: '@/plugins/i18n',
+      ssr: false
+    },
+    {
+      src: '@/plugins/vue-gemini-scrollbar',
+      ssr: false
+    }
   ],
 
   /*
