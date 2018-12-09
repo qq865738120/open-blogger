@@ -30,7 +30,6 @@
         </el-col>
         <el-col span="3">
           <el-row
-
             span="24"
             type="flex"
             justify="end">
