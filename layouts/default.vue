@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header class="header">
+    <el-header class="header bg-color-main-color">
       <el-row
         :gutter="20"
         type="flex"
@@ -60,8 +60,14 @@
     <el-main>
       <nuxt/>
     </el-main>
-    <el-footer>
-      13
+    <el-footer class="bg-color-main-color">
+      <el-row
+        type="flex"
+        justify="center">
+        <img
+          src="@/static/logo.png"
+          style="width: 128px; height: 52.6px;">
+      </el-row>
     </el-footer>
   </el-container>
 </template>
@@ -86,8 +92,11 @@ export default {
 <style lang="scss">
 @import 'assets/style/common';
 
-.el-header {
-  background-color: $--main-color;
+body {
+  background-color: #f4f4f4;
+}
+.header {
+  box-shadow: 0 0px 24px $--color-main-light-1;
 }
 .logo {
   color: $--color-white;
@@ -101,9 +110,6 @@ export default {
   width: 1px;
   height: 11px;
   margin: 0 10px;
-}
-.header {
-  box-shadow: 0 0px 24px $--color-main-light-1;
 }
 .header-menu {
   border-bottom: 0 !important;
