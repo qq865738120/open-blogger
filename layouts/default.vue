@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header>
+    <el-header class="header">
       <el-row
         :gutter="20"
         type="flex"
@@ -13,6 +13,7 @@
         </el-col>
         <el-col :span="9">
           <el-menu
+            class="header-menu"
             mode="horizontal"
             default-active="1"
             background-color="#2B3843"
@@ -28,19 +29,30 @@
             </el-menu-item>
           </el-menu>
         </el-col>
-        <el-col span="3">
+        <el-col :span="4">
           <el-row
-            span="24"
+            :gutter="20"
             type="flex"
             justify="end">
-            <el-input
-              v-model="input21"
-              class="search-input"
-              maxlength="120"
-              minlength="2"
-              clearable="true"
-              placeholder="请输入内容"
-              prefix-icon="el-icon-search"/>
+            <el-col :span="18">
+              <el-input
+                v-model="searchInput"
+                :clearable="true"
+                :placeholder="$t('header.search.placeholder')"
+                class="search-input"
+                maxlength="120"
+                minlength="2"
+                prefix-icon="el-icon-search"/>
+            </el-col>
+            <el-col :span="10">
+              <div
+                class="flex-center font-small"
+                style="width: 100%; height: 100%; color: white; font-weight: 400;">
+                <span>{{ $t('header.login') }}</span>
+                <span class="line bg-color-main-light-8"/>
+                <span>{{ $t('header.register') }}</span>
+              </div>
+            </el-col>
           </el-row>
         </el-col>
       </el-row>
@@ -56,6 +68,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      searchInput: ''
+    }
+  },
   mounted() {
     var scrollbar = new this.$geminiScrollbar({
       element: document.body,
@@ -79,5 +96,16 @@ export default {
 .search-input .el-input__inner {
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.2);
+}
+.line {
+  width: 1px;
+  height: 11px;
+  margin: 0 10px;
+}
+.header {
+  box-shadow: 0 0px 24px $--color-main-light-1;
+}
+.header-menu {
+  border-bottom: 0 !important;
 }
 </style>

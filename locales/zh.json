@@ -2,6 +2,11 @@
   "language": "简体中文",
   "header": {
     "homePage": "首页",
-    "classify": "分类"
+    "classify": "分类",
+    "search": {
+      "placeholder": "请输入关键词"
+    },
+    "login": "登录",
+    "register": "注册"
   }
 }
