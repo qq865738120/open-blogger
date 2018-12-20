@@ -60,13 +60,23 @@
     <el-main>
       <nuxt/>
     </el-main>
-    <el-footer class="bg-color-main-color">
+    <el-footer
+      class="bg-color-main-color"
+      height="200px">
       <el-row
         type="flex"
         justify="center">
         <img
           src="@/static/logo.png"
-          style="width: 128px; height: 52.6px;">
+          style="width: 128px; height: 52.6px; margin: 60px 0 24px 0;">
+      </el-row>
+      <el-row
+        class="fonter-bottom"
+        type="flex"
+        justify="center">
+        <span>友情链接：</span>
+        <a>123</a>
+        <a>123</a>
       </el-row>
     </el-footer>
   </el-container>
@@ -113,5 +123,13 @@ body {
 }
 .header-menu {
   border-bottom: 0 !important;
+}
+.fonter-bottom > span,
+.fonter-bottom > a {
+  margin: 0 3px;
+  color: $--color-main-light-5;
+}
+.fonter-bottom > a:hover {
+  color: white;
 }
 </style>
