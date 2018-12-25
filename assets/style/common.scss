@@ -57,3 +57,15 @@ $--extra-extra-small: 12px;
   align-items: center;
   justify-content: center;
 }
+.flex-inline-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-inline-between {
+  display: inline-flex;
+  justify-content: space-between;
+}
+.margin-top-20 {
+  margin-top: 20px;
+}

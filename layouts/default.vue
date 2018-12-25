@@ -57,7 +57,7 @@
         </el-col>
       </el-row>
     </el-header>
-    <el-main>
+    <el-main style="margin: 0 auto">
       <nuxt/>
     </el-main>
     <el-footer

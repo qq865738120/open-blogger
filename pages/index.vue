@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <!-- <section class="container">
     <div>
       <logo/>
       <h1 class="title">
@@ -17,51 +17,55 @@
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey">{{ $t('language') }}</a>
-        <el-button
-          type="primary">主要按钮</el-button>
       </div>
     </div>
-  </section>
+  </section> -->
+  <div
+    class="flex-inline-between"
+    style="width: 1080px">
+    <div style="width: 712px">
+      <el-card class="max-box-card">
+        <div
+          slot="header"
+          class="clearfix">
+          <span class="iconfont open-zhishi font-extra-large">{{ $t('homePage.choice') }}</span>
+        </div>
+        <main-display />
+      </el-card>
+      <el-card class="max-box-card margin-top-20">
+        <div
+          slot="header"
+          class="clearfix">
+          <span class="iconfont open-yuedu font-extra-large">{{ $t('homePage.recommend') }}</span>
+        </div>
+      </el-card>
+    </div>
+    <div style="width: 344px;">
+      <el-card class="max-box-card">
+        <div
+          slot="header"
+          class="clearfix">
+          <span class="iconfont open-neifenmike font-extra-large">{{ $t('homePage.hotspot') }}</span>
+        </div>
+      </el-card>
+    </div>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import MainDisplay from '~/components/MainDisplay.vue'
 
 export default {
   components: {
-    Logo
+    MainDisplay
   }
 }
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style lang="scss">
+@import 'assets/style/common';
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.max-box-card {
+  width: 100%;
 }
 </style>

@@ -4,11 +4,11 @@ html, body {
 
 @font-face {
   font-family: 'iconfont';  /* project id 957689 */
-  src: url('//at.alicdn.com/t/font_957689_rau7apgz4vb.eot');
-  src: url('//at.alicdn.com/t/font_957689_rau7apgz4vb.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_957689_rau7apgz4vb.woff') format('woff'),
-  url('//at.alicdn.com/t/font_957689_rau7apgz4vb.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_957689_rau7apgz4vb.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_957689_seztu7to5v.eot');
+  src: url('//at.alicdn.com/t/font_957689_seztu7to5v.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_957689_seztu7to5v.woff') format('woff'),
+  url('//at.alicdn.com/t/font_957689_seztu7to5v.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_957689_seztu7to5v.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;
@@ -20,8 +20,8 @@ html, body {
 
 .open-logo:before { content: "\e600"; }
 
-.flex-inline-center {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
+.open-zhishi:before { content: "\e770"; margin-right: 10px;}
+
+.open-yuedu:before { content: "\e778"; margin-right: 10px;}
+
+.open-neifenmike:before { content: "\e78a"; margin-right: 10px;}
