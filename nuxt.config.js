@@ -37,15 +37,23 @@ module.exports = {
   */
   plugins: [
     {
+      // element-ui组件库
       src: '@/plugins/element-ui',
       ssr: false
     },
     {
+      // vue国际化支持
       src: '@/plugins/i18n',
       ssr: false
     },
     {
+      // 滚动条
       src: '@/plugins/vue-gemini-scrollbar',
+      ssr: false
+    },
+    {
+      // 图片懒加载
+      src: '@/plugins/vue-lazyload',
       ssr: false
     }
   ],
