@@ -4,6 +4,7 @@ $--secondary-color: #FF9C00; //辅助色
 
 $--color-white: #fff;
 $--color-black: #000;
+$--color-14: #141414;
 
 $--color-main-light-1: mix($--color-white, $--main-color, 10%); /* 404b54 */
 $--color-main-light-2: mix($--color-white, $--main-color, 20%); /* 555f68 */
@@ -68,4 +69,10 @@ $--extra-extra-small: 12px;
 }
 .margin-top-20 {
   margin-top: 20px;
+}
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+.margin-left-30 {
+  margin-left: 30px;
 }

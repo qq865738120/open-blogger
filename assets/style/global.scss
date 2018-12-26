@@ -2,6 +2,10 @@ html, body {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: 'iconfont';  /* project id 957689 */
   src: url('//at.alicdn.com/t/font_957689_seztu7to5v.eot');
