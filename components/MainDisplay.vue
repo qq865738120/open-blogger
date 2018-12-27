@@ -12,7 +12,7 @@
         <span>{{ data.title }}</span>
         <p>{{ data.describe }}</p>
         <p>{{ data.author }}</p>
-        <div>
+        <div class="margin-top-10">
           <el-tag
             v-for="(item, index) of data.tag"
             :key="index"
@@ -66,6 +66,9 @@ export default {
   height: 48px;
   line-height: 24px;
   @include over-length(2);
+}
+.content-right > span:nth-child(1):hover {
+  color: $--color-main-light-2;
 }
 .content-right > p:first-of-type {
   color: $--color-sub-black;

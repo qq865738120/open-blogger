@@ -86,8 +86,14 @@ $--px40: 40px;
 @mixin spacing($attribute, $direction, $size) {
   #{$attribute}-#{$direction}: $size;
 }
+.margin-top-10 {
+  @include spacing(margin, top, $--px10)
+}
 .margin-top-20 {
   @include spacing(margin, top, $--px20)
+}
+.margin-top-24 {
+  @include spacing(margin, top, $--px24)
 }
 .margin-left-30 {
   @include spacing(margin, left, $--px30)

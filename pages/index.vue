@@ -30,8 +30,15 @@
           class="clearfix">
           <span class="iconfont open-zhishi font-extra-large">{{ $t('homePage.choice') }}</span>
         </div>
-        <main-display />
-        <sub-display />
+        <main-display :data="mainDisplay"/>
+        <div
+          class="flex-inline-between margin-top-24"
+          style="width: 100%">
+          <sub-display
+            v-for="(item, index) of subDisplay"
+            :key="index"
+            :data="item" />
+        </div>
       </el-card>
       <el-card class="max-box-card margin-top-20">
         <div
@@ -61,6 +68,41 @@ export default {
   components: {
     MainDisplay,
     SubDisplay
+  },
+  data() {
+    return {
+      mainDisplay: {
+        imgSrc:
+          'https://static001.infoq.cn/resource/image/ea/74/ea1ed1fe11dc85f2ffb37dda5c2b4574.jpg?x-oss-process=image/crop,y_145,w_999,h_514/resize,w_776,h_400',
+        title: '2018 年终盘点：“年度爆款”的区块链真的结束了吗？',
+        describe: '年终盘点之区块链：拨霾见日，大路朝天',
+        author: '覃云，徐川',
+        tag: ['区块链', 'web']
+      },
+      subDisplay: [
+        {
+          imgSrc:
+            'https://static001.infoq.cn/resource/image/ea/74/ea1ed1fe11dc85f2ffb37dda5c2b4574.jpg?x-oss-process=image/crop,y_145,w_999,h_514/resize,w_776,h_400',
+          title: '2018 年终盘点：“年度爆款”的区块链真的结束了吗？',
+          author: '覃云，徐川',
+          tag: ['区块链', 'web']
+        },
+        {
+          imgSrc:
+            'https://static001.infoq.cn/resource/image/ea/74/ea1ed1fe11dc85f2ffb37dda5c2b4574.jpg?x-oss-process=image/crop,y_145,w_999,h_514/resize,w_776,h_400',
+          title: '2018 年终盘点：“年度爆款”的区块链真的结束了吗？',
+          author: '覃云，徐川',
+          tag: ['区块链', 'web']
+        },
+        {
+          imgSrc:
+            'https://static001.infoq.cn/resource/image/ea/74/ea1ed1fe11dc85f2ffb37dda5c2b4574.jpg?x-oss-process=image/crop,y_145,w_999,h_514/resize,w_776,h_400',
+          title: '2018 年终盘点：“年度爆款”的区块链真的结束了吗？',
+          author: '覃云，徐川',
+          tag: ['区块链', 'web']
+        }
+      ]
+    }
   }
 }
 </script>

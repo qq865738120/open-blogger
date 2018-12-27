@@ -53,6 +53,7 @@ export default {
 
 .root {
   width: 210px;
+  display: inline-block;
 }
 .content {
   display: flex;
@@ -69,6 +70,9 @@ export default {
   line-height: 24px;
   @include over-length(2);
 }
+.content-bottom > p:first-of-type:hover {
+  color: $--color-main-light-2;
+}
 .content-bottom > p:nth-of-type(2) {
   font-size: $--extra-extra-small;
   color: $--color-base-black-3;
@@ -79,10 +83,6 @@ export default {
 .content-bottom > p:nth-of-type(2)::before {
   content: '作者：';
   color: $--color-sub-black;
-}
-.content-bottom > div {
-  position: absolute;
-  bottom: 0;
 }
 .img,
 .img > img {
