@@ -31,6 +31,7 @@
           <span class="iconfont open-zhishi font-extra-large">{{ $t('homePage.choice') }}</span>
         </div>
         <main-display />
+        <sub-display />
       </el-card>
       <el-card class="max-box-card margin-top-20">
         <div
@@ -54,15 +55,17 @@
 
 <script>
 import MainDisplay from '~/components/MainDisplay.vue'
+import SubDisplay from '~/components/SubDisplay.vue'
 
 export default {
   components: {
-    MainDisplay
+    MainDisplay,
+    SubDisplay
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import 'assets/style/common';
 
 .max-box-card {

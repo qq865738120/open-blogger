@@ -1,10 +1,16 @@
+/* 内部全局变量 */
+
 /* color相关变量 */
 $--main-color: #2b3843; //主色调
 $--secondary-color: #FF9C00; //辅助色
 
 $--color-white: #fff;
 $--color-black: #000;
-$--color-14: #141414;
+$--color-base-black: #141414;
+$--color-base-black-2: #333333;
+$--color-base-black-3: #484848;
+$--color-base-black-4: #666666;
+$--color-sub-black: #828a92;
 
 $--color-main-light-1: mix($--color-white, $--main-color, 10%); /* 404b54 */
 $--color-main-light-2: mix($--color-white, $--main-color, 20%); /* 555f68 */
@@ -52,27 +58,46 @@ $--extra-extra-small: 12px;
 .font-extra-small { font-size: $--extra-small; }
 .font-extra-extra-small { font-size: $--extra-extra-small; }
 
-/* 布局相关 */
+/* 布局相关变量 */
+$--px6: 6px;
+$--px8: 8px;
+$--px10: 10px;
+$--px12: 12px;
+$--px16: 16px;
+$--px20: 20px;
+$--px24: 24px;
+$--px30: 30px;
+$--px40: 40px;
+@mixin felx($display, $direction, $align, $justify) {
+  display: $display;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
 .flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include felx(flex, row, center, center);
 }
 .flex-inline-center {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @include felx(inline-flex, row, center, center)
 }
 .flex-inline-between {
-  display: inline-flex;
-  justify-content: space-between;
+  @include felx(inline-flex, row, flex-start, space-between)
+}
+@mixin spacing($attribute, $direction, $size) {
+  #{$attribute}-#{$direction}: $size;
 }
 .margin-top-20 {
-  margin-top: 20px;
-}
-.margin-bottom-20 {
-  margin-bottom: 20px;
+  @include spacing(margin, top, $--px20)
 }
 .margin-left-30 {
-  margin-left: 30px;
+  @include spacing(margin, left, $--px30)
+}
+
+/* 常用样式封装 */
+@mixin over-length($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
 }
