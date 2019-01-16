@@ -168,6 +168,12 @@ export default {
         }
       ]
     }
+  },
+  async mounted() {
+    const data = await this.$axios.get('/api/test')
+    console.log('data', data)
+    const datas = await this.$axios.get('/api/login')
+    console.log('data', datas)
   }
 }
 </script>

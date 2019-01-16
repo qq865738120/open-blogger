@@ -55,6 +55,11 @@ module.exports = {
       // 图片懒加载
       src: '@/plugins/vue-lazyload',
       ssr: false
+    },
+    {
+      // axios
+      src: '@/plugins/axios',
+      ssr: false
     }
   ],
 
